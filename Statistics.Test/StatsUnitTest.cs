@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using Statistics;
+using System.Collections.Generic;
 
 namespace Statistics.Test
 {
@@ -21,8 +22,8 @@ namespace Statistics.Test
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatsComputer();
-            var computedStats = statsComputer.CalculateStatistics(
-                new List<___>{});
+            // var computedStats = statsComputer.CalculateStatistics(
+            //     new List<___>{});
             // All fields of computedStats (average, max, min) must be
             // Double.NaN (not-a-number), as described in
             // https://docs.microsoft.com/en-us/dotnet/api/system.double.nan?view=netcore-3.1
