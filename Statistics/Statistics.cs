@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Statistics
+﻿namespace Statistics
 {
     public class StatsComputer
     {
         public Stats CalculateStatistics(List<float> numbers)
         {
-            //Implement statistics here
+            if (numbers.Count == 0)
+            {
+                return new Stats(float.NaN, float.NaN, float.NaN);
+            }
+
+            // Calculate the Average, Max, and Min for non-empty lists
+            float average = numbers.Average();
+            float max = numbers.Max();
+            float min = numbers.Min();
+
+            return new Stats(average,max,min);
         }
     }
 }
