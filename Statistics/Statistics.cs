@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Statistics
+﻿namespace Statistics
 {
     public class StatsComputer
     {

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
-using Statistics;
 
 namespace Statistics.Test
 {
@@ -17,13 +16,15 @@ namespace Statistics.Test
             Assert.True(Math.Abs(computedStats.Average - 4.525) <= epsilon);
             Assert.True(Math.Abs(computedStats.Max - 8.9) <= epsilon);
             Assert.True(Math.Abs(computedStats.Min - 1.5) <= epsilon);
+
+            //Epsilon Usage : Instead of checking for exact equality, we check if the difference between two floating-point numbers is within a small range.
         }
         [Fact]
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatsComputer();
             var computedStats = statsComputer.CalculateStatistics(
-                new List<float> {});
+                new List<float> ());
 
             Assert.True(Double.IsNaN(computedStats.Average));
             Assert.True(Double.IsNaN(computedStats.Max));
