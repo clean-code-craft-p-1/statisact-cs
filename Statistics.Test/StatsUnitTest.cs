@@ -11,11 +11,11 @@ namespace Statistics.Test
         {
             var statsComputer = new StatsComputer();
             var computedStats = statsComputer.CalculateStatistics(
-                new List<___>{1.5, 8.9, 3.2, 4.5});
+                new List<___>{98.6, 98.2, 97.8, 102.2});
             float epsilon = 0.001F;
-            Assert.True(Math.Abs(computedStats.average - 4.525) <= epsilon);
-            Assert.True(Math.Abs(computedStats.max - 8.9) <= epsilon);
-            Assert.True(Math.Abs(computedStats.min - 1.5) <= epsilon);
+            Assert.True(Math.Abs(computedStats.average - 99.2) <= epsilon);
+            Assert.True(Math.Abs(computedStats.max - 102.2) <= epsilon);
+            Assert.True(Math.Abs(computedStats.min - 97.8) <= epsilon);
         }
         [Fact]
         public void ReportsNaNForEmptyInput()
